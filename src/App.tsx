@@ -316,7 +316,7 @@ function App() {
 
     message += `\nMohon diproses ya kak! 🙏`;
 
-    const whatsappNumber = '6281234567890'; // GANTI dengan nomor WA Anda
+    const whatsappNumber = '6282395928309'; // GANTI dengan nomor WA Anda
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
