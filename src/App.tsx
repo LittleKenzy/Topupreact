@@ -484,7 +484,7 @@ function App() {
                         ) : (
                           <div className="text-5xl mb-3">{game.icon}</div>
                         )} */}
-                        <img src={game.icon} alt="" className='w-full h-73 mb-6 rounded-2xl'/>
+                        <img src={game.icon} alt="" className='w-full h-auto object-contain rounded-2xl mb-5'/>
 
 
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{game.name}</h4>
@@ -523,7 +523,7 @@ function App() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${wallet.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                       <div className="relative">
                         {/* <div className="text-5xl mb-3">{wallet.icon}</div> */}
-                        {typeof wallet.icon === "string" && wallet.icon.startsWith("/src") ? (
+                        {/* {typeof wallet.icon === "string" && wallet.icon.startsWith("/src") ? (
                           <img
                             src={wallet.icon}
                             alt={wallet.name}
@@ -531,7 +531,8 @@ function App() {
                           />
                         ) : (
                           <div className="text-5xl mb-3">{wallet.icon}</div>
-                        )}
+                        )} */}
+                        <img src={wallet.icon} alt="" className='w-full h-auto object-contain rounded-2xl mb-5'/>
 
 
 
