@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Gamepad2, Wallet, Zap, ChevronRight, ArrowLeft, Send, Search, X } from 'lucide-react';
-import freefire from "/src/assets/img/freefire.webp";
-import mlbb from "/src/assets/img/mlbb.webp";
-import pubg from "/src/assets/img/pubg.webp";
-import genshin from "/src/assets/img/genshin.webp";
-import valorant from "/src/assets/img/valorant.webp";
-import cod from "/src/assets/img/cod.webp";
-import gopay from "/src/assets/img/gopay2.webp";
-import ovo from "/src/assets/img/ovo.webp";
-import dana from "/src/assets/img/dana.webp";
-import spay from "/src/assets/img/spay.webp";
+import freefire from "./assets/img/freefire.webp";
+import mlbb from "./assets/img/mlbb.webp";
+import pubg from "./assets/img/pubg.webp";
+import genshin from "./assets/img/genshin.webp";
+import valorant from "./assets/img/valorant.webp";
+import cod from "./assets/img/cod.webp";
+import gopay from "./assets/img/gopay3.webp";
+import ovo from "./assets/img/ovo.webp";
+import dana from "./assets/img/dana.webp";
+import spay from "./assets/img/spay.webp";
 
 
 
@@ -480,11 +480,11 @@ function App() {
                       <div className="relative">
                         {/* <div className="text-5xl mb-3">{game.icon}</div> */}
                         {typeof game.icon === "string" && game.icon.startsWith("/src") ? (
-                          <img src={game.icon} alt={game.name} className="w-full h-32 object-contain mb-3 mx-auto rounded-xl"
-                          />
+                          <img src={game.icon} className='width-full h-73 mb-6 rounded-2xl' />
                         ) : (
                           <div className="text-5xl mb-3">{game.icon}</div>
                         )}
+
 
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{game.name}</h4>
                         <div className="flex items-center text-gray-400 text-xs">
@@ -532,6 +532,8 @@ function App() {
                           <div className="text-5xl mb-3">{wallet.icon}</div>
                         )}
 
+
+
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{wallet.name}</h4>
                         <div className="flex items-center text-gray-400 text-xs">
                           <span>Lihat Paket</span>
@@ -569,7 +571,8 @@ function App() {
             {/* Header */}
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center gap-4">
-                <div className="text-6xl">{selectedItem.icon}</div>
+                {/* <div className="text-6xl">{selectedItem.icon}</div> */}
+                <img src={selectedItem.icon} alt="" className='w-50 h-50 rounded-2xl'/>
                 <div>
                   <h3 className="text-2xl font-bold text-white">{selectedItem.name}</h3>
                   <p className="text-gray-400">Pilih nominal top up</p>
@@ -656,7 +659,7 @@ function App() {
             {/* Header */}
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center gap-4">
-                <div className="text-6xl">{selectedItem.icon}</div>
+                <img src={selectedItem.icon} alt="" className='w-50 h-50 rounded-2xl'/>
                 <div>
                   <h3 className="text-2xl font-bold text-white">{selectedItem.name}</h3>
                   <p className="text-gray-400">Pilih nominal top up</p>
