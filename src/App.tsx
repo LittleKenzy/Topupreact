@@ -479,11 +479,12 @@ function App() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                       <div className="relative">
                         {/* <div className="text-5xl mb-3">{game.icon}</div> */}
-                        {typeof game.icon === "string" && game.icon.startsWith("/src") ? (
+                        {/* {typeof game.icon === "string" && game.icon.startsWith("/src") ? (
                           <img src={game.icon} className='width-full h-73 mb-6 rounded-2xl' />
                         ) : (
                           <div className="text-5xl mb-3">{game.icon}</div>
-                        )}
+                        )} */}
+                        <img src={game.icon} alt="" className='w-full h-73 mb-6 rounded-2xl'/>
 
 
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{game.name}</h4>
