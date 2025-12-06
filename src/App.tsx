@@ -6,7 +6,7 @@ import pubg from "/src/assets/img/pubg.webp";
 import genshin from "/src/assets/img/genshin.webp";
 import valorant from "/src/assets/img/valorant.webp";
 import cod from "/src/assets/img/cod.webp";
-import gopay from "/src/assets/img/gopay.webp";
+import gopay from "/src/assets/img/gopay_new.webp";
 import ovo from "/src/assets/img/ovo.webp";
 import dana from "/src/assets/img/dana.webp";
 import spay from "/src/assets/img/spay.webp";
