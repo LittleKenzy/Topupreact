@@ -1,5 +1,20 @@
 import { useState } from 'react';
 import { Gamepad2, Wallet, Zap, ChevronRight, ArrowLeft, Send, Search, X } from 'lucide-react';
+import freefire from "/src/assets/img/freefire.webp";
+import mlbb from "/src/assets/img/mlbb.webp";
+import pubg from "/src/assets/img/pubg.webp";
+import genshin from "/src/assets/img/genshin.webp";
+import valorant from "/src/assets/img/valorant.webp";
+import cod from "/src/assets/img/cod.webp";
+import gopay from "/src/assets/img/gopay.webp";
+import ovo from "/src/assets/img/ovo.webp";
+import dana from "/src/assets/img/dana.webp";
+import spay from "/src/assets/img/spay.webp";
+
+
+
+
+
 
 // Types
 interface Product {
@@ -41,7 +56,7 @@ function App() {
     {
       id: 'ml',
       name: 'Mobile Legends',
-      icon: '⚔️',
+      icon: mlbb,
       gradient: 'from-blue-500 to-purple-600',
       needsServer: true,
       products: [
@@ -64,7 +79,7 @@ function App() {
     {
       id: 'ff',
       name: 'Free Fire',
-      icon: '🔥',
+      icon: freefire,
       gradient: 'from-orange-500 to-red-600',
       needsServer: false,
       products: [
@@ -85,7 +100,7 @@ function App() {
     {
       id: 'pubg',
       name: 'PUBG Mobile',
-      icon: '🎯',
+      icon: pubg,
       gradient: 'from-yellow-500 to-orange-600',
       needsServer: false,
       products: [
@@ -115,7 +130,7 @@ function App() {
     {
       id: 'genshin',
       name: 'Genshin Impact',
-      icon: '✨',
+      icon: genshin,
       gradient: 'from-pink-500 to-purple-600',
       needsServer: true,
       products: [
@@ -131,7 +146,7 @@ function App() {
     {
       id: 'valorant',
       name: 'Valorant',
-      icon: '🎮',
+      icon: valorant,
       gradient: 'from-red-500 to-pink-600',
       needsServer: false,
       products: [
@@ -151,7 +166,7 @@ function App() {
     {
       id: 'codm',
       name: 'Call of Duty Mobile',
-      icon: '💣',
+      icon: cod,
       gradient: 'from-gray-700 to-gray-900',
       needsServer: false,
       products: [
@@ -172,7 +187,7 @@ function App() {
     {
       id: 'gopay',
       name: 'GoPay',
-      icon: '💚',
+      icon: gopay,
       gradient: 'from-green-500 to-teal-600',
       products: [
         { id: 'gp1', name: 'Rp 10.000', price: 12000 },
@@ -200,7 +215,7 @@ function App() {
     {
       id: 'ovo',
       name: 'OVO',
-      icon: '💜',
+      icon: ovo,
       gradient: 'from-purple-500 to-indigo-600',
       products: [
         { id: 'ovo1', name: 'Rp 10.000', price: 12000 },
@@ -228,7 +243,7 @@ function App() {
     {
       id: 'dana',
       name: 'DANA',
-      icon: '💙',
+      icon: dana,
       gradient: 'from-blue-500 to-cyan-600',
       products: [
         { id: 'dana1', name: 'Rp 1.000', price: 3000 },
@@ -261,7 +276,7 @@ function App() {
     {
       id: 'shopeepay',
       name: 'ShopeePay',
-      icon: '🧡',
+      icon: spay,
       gradient: 'from-orange-500 to-red-500',
       products: [
         { id: 'sp5', name: 'Rp 5.000', price: 7000 },
@@ -463,7 +478,14 @@ function App() {
                     >
                       <div className={`absolute inset-0 bg-gradient-to-br ${game.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                       <div className="relative">
-                        <div className="text-5xl mb-3">{game.icon}</div>
+                        {/* <div className="text-5xl mb-3">{game.icon}</div> */}
+                        {typeof game.icon === "string" && game.icon.startsWith("/src") ? (
+                          <img src={game.icon} alt={game.name} className="w-full h-32 object-contain mb-3 mx-auto rounded-xl"
+                          />
+                        ) : (
+                          <div className="text-5xl mb-3">{game.icon}</div>
+                        )}
+
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{game.name}</h4>
                         <div className="flex items-center text-gray-400 text-xs">
                           <span>Lihat Paket</span>
@@ -499,7 +521,17 @@ function App() {
                     >
                       <div className={`absolute inset-0 bg-gradient-to-br ${wallet.gradient} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                       <div className="relative">
-                        <div className="text-5xl mb-3">{wallet.icon}</div>
+                        {/* <div className="text-5xl mb-3">{wallet.icon}</div> */}
+                        {typeof wallet.icon === "string" && wallet.icon.startsWith("/src") ? (
+                          <img
+                            src={wallet.icon}
+                            alt={wallet.name}
+                            className="w-full h-24 object-contain mb-3 mx-auto rounded-xl"
+                          />
+                        ) : (
+                          <div className="text-5xl mb-3">{wallet.icon}</div>
+                        )}
+
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{wallet.name}</h4>
                         <div className="flex items-center text-gray-400 text-xs">
                           <span>Lihat Paket</span>
