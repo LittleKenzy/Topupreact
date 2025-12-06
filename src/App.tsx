@@ -60,20 +60,28 @@ function App() {
       gradient: 'from-blue-500 to-purple-600',
       needsServer: true,
       products: [
-        { id: 'ml1', name: '3 Diamonds', price: 1200 },
-        { id: 'ml2', name: '5 Diamonds', price: 2000 },
-        { id: 'ml3', name: '10 Diamonds', price: 3000, bonus: '9 + 1 Bonus' },
-        { id: 'ml4', name: '14 Diamonds', price: 5000, bonus: '13 + 1 Bonus' },
-        { id: 'ml5', name: '19 Diamonds', price: 6000, bonus: '17 + 2 Bonus' },
-        { id: 'ml6', name: '28 Diamonds', price: 9000, bonus: '26 + 2 Bonus' },
-        { id: 'ml7', name: '36 Diamonds', price: 11000, bonus: '32 + 4 Bonus' },
-        { id: 'ml8', name: '44 Diamonds', price: 13000, bonus: '40 + 4 Bonus' },
-        { id: 'ml9', name: '59 Diamonds', price: 16000, bonus: '53 + 6 Bonus' },
-        { id: 'ml10', name: '74 Diamonds', price: 20000, bonus: '69 + 5 Bonus' },
-        { id: 'ml11', name: '85 Diamonds', price: 23000, bonus: '77 + 8 Bonus' },
-        { id: 'ml12', name: '140 Diamonds', price: 38000, bonus: '127 + 13 Bonus' },
-        { id: 'ml13', name: '185 Diamonds', price: 48000, bonus: '169 + 16 Bonus' },
-        { id: 'ml14', name: '222 Diamonds', price: 57000, bonus: '200 + 22 Bonus' },
+        // WEEKLY DIAMOND PASS
+        { id: 'ml1', name: 'Weekly Diamond Pass', price: 29245 },
+        { id: 'ml2', name: 'Weekly Diamond Pass x2', price: 56490 },
+        { id: 'ml3', name: 'Weekly Diamond Pass x3', price: 83734 },
+        { id: 'ml4', name: 'Weekly Diamond Pass x4', price: 110979 },
+        { id: 'ml5', name: 'Weekly Diamond Pass x5', price: 138224 },
+
+        // DIAMOND LIST
+        { id: 'ml6', name: '3 Diamonds', price: 1200 },
+        { id: 'ml7', name: '5 Diamonds', price: 2000 },
+        { id: 'ml8', name: '10 Diamonds', price: 3000, bonus: '9 + 1 Bonus' },
+        { id: 'ml9', name: '14 Diamonds', price: 5000, bonus: '13 + 1 Bonus' },
+        { id: 'ml10', name: '19 Diamonds', price: 6000, bonus: '17 + 2 Bonus' },
+        { id: 'ml11', name: '28 Diamonds', price: 9000, bonus: '26 + 2 Bonus' },
+        { id: 'ml12', name: '36 Diamonds', price: 11000, bonus: '32 + 4 Bonus' },
+        { id: 'ml13', name: '44 Diamonds', price: 13000, bonus: '40 + 4 Bonus' },
+        { id: 'ml14', name: '59 Diamonds', price: 16000, bonus: '53 + 6 Bonus' },
+        { id: 'ml15', name: '74 Diamonds', price: 20000, bonus: '69 + 5 Bonus' },
+        { id: 'ml16', name: '85 Diamonds', price: 23000, bonus: '77 + 8 Bonus' },
+        { id: 'ml17', name: '140 Diamonds', price: 38000, bonus: '127 + 13 Bonus' },
+        { id: 'ml18', name: '185 Diamonds', price: 48000, bonus: '169 + 16 Bonus' },
+        { id: 'ml19', name: '222 Diamonds', price: 57000, bonus: '200 + 22 Bonus' }
       ]
     },
     {
@@ -484,7 +492,7 @@ function App() {
                         ) : (
                           <div className="text-5xl mb-3">{game.icon}</div>
                         )} */}
-                        <img src={game.icon} alt="" className='w-full h-auto object-contain rounded-2xl mb-5'/>
+                        <img src={game.icon} alt="" className='w-full h-auto object-contain rounded-2xl mb-5' />
 
 
                         <h4 className="text-white font-semibold text-sm md:text-base mb-1">{game.name}</h4>
@@ -532,7 +540,7 @@ function App() {
                         ) : (
                           <div className="text-5xl mb-3">{wallet.icon}</div>
                         )} */}
-                        <img src={wallet.icon} alt="" className='w-full h-auto object-contain rounded-2xl mb-5'/>
+                        <img src={wallet.icon} alt="" className='w-full h-auto object-contain rounded-2xl mb-5' />
 
 
 
@@ -574,7 +582,7 @@ function App() {
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center gap-4">
                 {/* <div className="text-6xl">{selectedItem.icon}</div> */}
-                <img src={selectedItem.icon} alt="" className='w-50 h-50 rounded-2xl'/>
+                <img src={selectedItem.icon} alt="" className='w-50 h-50 rounded-2xl' />
                 <div>
                   <h3 className="text-2xl font-bold text-white">{selectedItem.name}</h3>
                   <p className="text-gray-400">Pilih nominal top up</p>
@@ -661,7 +669,7 @@ function App() {
             {/* Header */}
             <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center gap-4">
-                <img src={selectedItem.icon} alt="" className='w-50 h-50 rounded-2xl'/>
+                <img src={selectedItem.icon} alt="" className='w-50 h-50 rounded-2xl' />
                 <div>
                   <h3 className="text-2xl font-bold text-white">{selectedItem.name}</h3>
                   <p className="text-gray-400">Pilih nominal top up</p>
